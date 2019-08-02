@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="g8i-5p-mfe" customClass="StandardCollectionViewCell" customModule="StickySplitCollectionViewFlowLayoutIntegration" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ae-QE-iFc">
+                        <rect key="frame" x="0.0" y="17" width="50" height="50"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="9Ae-QE-iFc" secondAttribute="height" multiplier="1:1" id="drz-fO-U6a"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brr-zM-n8K">
+                        <rect key="frame" x="0.0" y="71" width="50" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="brr-zM-n8K" firstAttribute="centerX" secondItem="g8i-5p-mfe" secondAttribute="centerX" id="84I-WO-JrT"/>
+                <constraint firstItem="brr-zM-n8K" firstAttribute="leading" secondItem="g8i-5p-mfe" secondAttribute="leading" id="O7B-PY-yXR"/>
+                <constraint firstItem="brr-zM-n8K" firstAttribute="top" secondItem="9Ae-QE-iFc" secondAttribute="bottom" constant="4" id="OXM-UJ-XvY"/>
+                <constraint firstAttribute="trailing" secondItem="brr-zM-n8K" secondAttribute="trailing" id="jXh-X1-vtO"/>
+                <constraint firstItem="9Ae-QE-iFc" firstAttribute="width" secondItem="g8i-5p-mfe" secondAttribute="width" id="uEx-Zh-84I"/>
+                <constraint firstItem="9Ae-QE-iFc" firstAttribute="centerX" secondItem="Ria-Ge-W2X" secondAttribute="centerX" id="wRf-2r-4hi"/>
+                <constraint firstItem="9Ae-QE-iFc" firstAttribute="centerY" secondItem="Ria-Ge-W2X" secondAttribute="centerY" constant="-8" id="yK9-QA-aXx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Ria-Ge-W2X"/>
+            <size key="customSize" width="145" height="164"/>
+            <connections>
+                <outlet property="primaryImageView" destination="9Ae-QE-iFc" id="bbu-R3-7iM"/>
+                <outlet property="primaryLabel" destination="brr-zM-n8K" id="ONG-W8-qgO"/>
+            </connections>
+            <point key="canvasLocation" x="144" y="71.964017991004496"/>
+        </collectionViewCell>
+    </objects>
+</document>

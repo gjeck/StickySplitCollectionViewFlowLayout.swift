@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="efV-Pl-plB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SK4-56-WLL">
+            <objects>
+                <navigationController id="efV-Pl-plB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rnf-7J-Vfp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FAL-ho-ilQ" kind="relationship" relationship="rootViewController" id="Whe-iX-FRn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MbH-Ly-IQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-671" y="114"/>
+        </scene>
+        <!--Examples-->
+        <scene sceneID="A6g-bA-Yg0">
+            <objects>
+                <tableViewController id="FAL-ho-ilQ" customClass="ExamplesTableViewController" customModule="StickySplitCollectionViewFlowLayoutIntegration" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sWy-5l-HTq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExampleCell" textLabel="L0i-d3-mxh" detailTextLabel="nSB-bB-9z8" style="IBUITableViewCellStyleSubtitle" id="cuO-BQ-Dhs">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cuO-BQ-Dhs" id="KuF-y5-sXm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L0i-d3-mxh">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nSB-bB-9z8">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="FAL-ho-ilQ" id="9rX-0P-efx"/>
+                            <outlet property="delegate" destination="FAL-ho-ilQ" id="8Ec-i8-7up"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Examples" id="Hb4-Ds-qvC"/>
+                    <connections>
+                        <segue destination="3zt-Gd-UHY" kind="show" identifier="NoMainHeaderCollectionViewController" id="P4a-Zb-yVP"/>
+                        <segue destination="cY2-1K-w5w" kind="show" identifier="ParallaxCollectionViewController" id="vNe-Ft-zt9"/>
+                        <segue destination="5DI-TO-hC5" kind="show" identifier="AvatarSlideCollectionViewController" id="amq-Jd-PeO"/>
+                        <segue destination="b8N-sL-d3U" kind="show" identifier="IntegrationTestCollectionViewController" id="2oM-SR-AnW"/>
+                        <segue destination="Eay-dd-gkf" kind="show" identifier="MediaPlaylistCollectionViewController" id="a8Z-CI-qHI"/>
+                        <segue destination="kgl-89-aTA" kind="show" identifier="UserProfileCollectionViewController" id="NWA-AE-MGp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucS-aj-0v6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="114"/>
+        </scene>
+        <!--NoMainHeaderCollectionViewController-->
+        <scene sceneID="PsH-HP-zz6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NoMainHeaderCollectionViewController" id="3zt-Gd-UHY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVF-A7-g0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="168"/>
+        </scene>
+        <!--ParallaxCollectionViewController-->
+        <scene sceneID="sX6-h9-mQg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ParallaxCollectionViewController" id="cY2-1K-w5w" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMV-bo-tXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="-32"/>
+        </scene>
+        <!--AvatarSlideCollectionViewController-->
+        <scene sceneID="fx6-nK-9TA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AvatarSlideCollectionViewController" id="5DI-TO-hC5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0G-Af-uTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="3"/>
+        </scene>
+        <!--IntegrationTestCollectionViewController-->
+        <scene sceneID="kFG-ha-VCX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="IntegrationTestCollectionViewController" id="b8N-sL-d3U" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UoE-19-KWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="205"/>
+        </scene>
+        <!--UserProfileCollectionViewController-->
+        <scene sceneID="gyp-zt-clT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserProfileCollectionViewController" id="kgl-89-aTA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qOE-WV-QQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="-107"/>
+        </scene>
+        <!--MediaPlaylistCollectionViewController-->
+        <scene sceneID="gYL-Hj-kYs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MediaPlaylistCollectionViewController" id="Eay-dd-gkf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTl-CI-CAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="-69"/>
+        </scene>
+    </scenes>
+</document>

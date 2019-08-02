@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YdI-pc-vve">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Profile-->
+        <scene sceneID="ZpL-t7-RN1">
+            <objects>
+                <viewController title="User Profile" id="YdI-pc-vve" customClass="UserProfileCollectionViewController" customModule="StickySplitCollectionViewFlowLayoutIntegration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="slp-Ki-53G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sXS-bi-FAD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PXc-1y-nhn" customClass="StickySplitCollectionViewFlowLayout" customModule="StickySplitCollectionViewFlowLayout">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="36"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="ILp-fL-K41">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCM-gb-P1j">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HUK-xe-jOq">
+                                                    <rect key="frame" x="10" y="0.0" width="410" height="36"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hP2-pI-Cab">
+                                                            <rect key="frame" x="0.0" y="0.0" width="38" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                            <state key="normal" title="Posts"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-Pv-PqB" userLabel="Videos">
+                                                            <rect key="frame" x="68" y="0.0" width="47" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                            <state key="normal" title="Videos"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GX-2C-5nQ">
+                                                            <rect key="frame" x="145" y="0.0" width="35" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                            <state key="normal" title="Likes"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhy-zy-MG7">
+                                                            <rect key="frame" x="210" y="0.0" width="42" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                            <state key="normal" title="Saved"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCN-mf-14Y">
+                                                            <rect key="frame" x="282" y="0.0" width="41" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                            <state key="normal" title="About"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faO-Y3-HkM" userLabel="Settings">
+                                                            <rect key="frame" x="353" y="0.0" width="57" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                            <state key="normal" title="Settings"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ve-MX-0Kc" userLabel="Underline View">
+                                                    <rect key="frame" x="8" y="32" width="42" height="4"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="4" id="QGc-Wa-eoO"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="HUK-xe-jOq" secondAttribute="trailing" constant="10" id="53s-0s-mME"/>
+                                                <constraint firstAttribute="bottom" secondItem="HUK-xe-jOq" secondAttribute="bottom" id="8cc-RU-qps"/>
+                                                <constraint firstItem="7ve-MX-0Kc" firstAttribute="centerX" secondItem="hP2-pI-Cab" secondAttribute="centerX" id="Dw4-tv-IFz"/>
+                                                <constraint firstItem="7ve-MX-0Kc" firstAttribute="firstBaseline" relation="greaterThanOrEqual" secondItem="hP2-pI-Cab" secondAttribute="firstBaseline" constant="8" id="GIM-26-1Ic"/>
+                                                <constraint firstItem="HUK-xe-jOq" firstAttribute="height" secondItem="MCM-gb-P1j" secondAttribute="height" id="I6s-Lj-NkK"/>
+                                                <constraint firstItem="7ve-MX-0Kc" firstAttribute="width" secondItem="hP2-pI-Cab" secondAttribute="width" constant="4" id="V4t-As-f2h"/>
+                                                <constraint firstItem="HUK-xe-jOq" firstAttribute="top" secondItem="MCM-gb-P1j" secondAttribute="top" id="nLL-Ni-8Mr"/>
+                                                <constraint firstItem="HUK-xe-jOq" firstAttribute="leading" secondItem="MCM-gb-P1j" secondAttribute="leading" constant="10" id="vuE-mC-T04"/>
+                                            </constraints>
+                                        </scrollView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="7ve-MX-0Kc" secondAttribute="bottom" id="1xs-h7-NzD"/>
+                                        <constraint firstAttribute="trailing" secondItem="MCM-gb-P1j" secondAttribute="trailing" id="Npb-go-Unn"/>
+                                        <constraint firstItem="MCM-gb-P1j" firstAttribute="top" secondItem="ILp-fL-K41" secondAttribute="top" id="WBd-DR-eg1"/>
+                                        <constraint firstAttribute="bottom" secondItem="MCM-gb-P1j" secondAttribute="bottom" id="r6w-TA-lYt"/>
+                                        <constraint firstItem="MCM-gb-P1j" firstAttribute="leading" secondItem="ILp-fL-K41" secondAttribute="leading" id="vcl-G8-hbh"/>
+                                    </constraints>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="YdI-pc-vve" id="o2C-5F-sdC"/>
+                                    <outlet property="delegate" destination="YdI-pc-vve" id="Ns0-v9-Tvm"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sXS-bi-FAD" firstAttribute="bottom" secondItem="ybV-K2-lzf" secondAttribute="bottom" id="Flo-bh-j3E"/>
+                            <constraint firstItem="sXS-bi-FAD" firstAttribute="trailing" secondItem="ybV-K2-lzf" secondAttribute="trailing" id="Jzc-oG-DHM"/>
+                            <constraint firstItem="sXS-bi-FAD" firstAttribute="top" secondItem="slp-Ki-53G" secondAttribute="top" id="NOh-Mg-dwR"/>
+                            <constraint firstItem="sXS-bi-FAD" firstAttribute="leading" secondItem="ybV-K2-lzf" secondAttribute="leading" id="qiy-xU-10Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ybV-K2-lzf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="User Profile" id="Qb0-ji-E6I"/>
+                    <connections>
+                        <outlet property="collectionView" destination="sXS-bi-FAD" id="at5-8c-d1N"/>
+                        <outlet property="collectionViewLayout" destination="PXc-1y-nhn" id="7qf-yR-hUO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="67X-fE-yCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-460" y="151.57421289355324"/>
+        </scene>
+    </scenes>
+</document>

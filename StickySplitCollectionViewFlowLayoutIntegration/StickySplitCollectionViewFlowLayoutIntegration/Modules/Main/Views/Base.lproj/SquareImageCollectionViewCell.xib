@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="smY-ZN-avl" customClass="StandardCollectionViewCell" customModule="StickySplitCollectionViewFlowLayoutIntegration" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="406"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="406"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beach" translatesAutoresizingMaskIntoConstraints="NO" id="gAO-R4-hup">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKm-mJ-DPc">
+                        <rect key="frame" x="0.0" y="374" width="374" height="32"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="gAO-R4-hup" firstAttribute="leading" secondItem="smY-ZN-avl" secondAttribute="leading" id="2zp-2R-Lir"/>
+                <constraint firstAttribute="trailing" secondItem="eKm-mJ-DPc" secondAttribute="trailing" id="8zX-8B-G0D"/>
+                <constraint firstItem="eKm-mJ-DPc" firstAttribute="leading" secondItem="smY-ZN-avl" secondAttribute="leading" id="Esc-G9-ogL"/>
+                <constraint firstItem="gAO-R4-hup" firstAttribute="width" secondItem="smY-ZN-avl" secondAttribute="width" id="Gp6-6M-aOQ"/>
+                <constraint firstItem="gAO-R4-hup" firstAttribute="top" secondItem="smY-ZN-avl" secondAttribute="top" id="HYD-4i-kxq"/>
+                <constraint firstAttribute="bottom" secondItem="eKm-mJ-DPc" secondAttribute="bottom" id="Pwu-t4-OVu"/>
+                <constraint firstItem="gAO-R4-hup" firstAttribute="height" secondItem="smY-ZN-avl" secondAttribute="width" id="Tib-4f-2RX"/>
+                <constraint firstAttribute="trailing" secondItem="gAO-R4-hup" secondAttribute="trailing" id="jwn-xD-bZf"/>
+                <constraint firstItem="eKm-mJ-DPc" firstAttribute="top" secondItem="gAO-R4-hup" secondAttribute="bottom" id="lvP-mI-LDI"/>
+            </constraints>
+            <connections>
+                <outlet property="primaryImageView" destination="gAO-R4-hup" id="Z01-iX-bJw"/>
+                <outlet property="primaryLabel" destination="eKm-mJ-DPc" id="5xK-gU-elY"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="beach" width="1776" height="1184"/>
+    </resources>
+</document>

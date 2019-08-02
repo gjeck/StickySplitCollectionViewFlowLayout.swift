@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uqV-ve-MjE">
+            <rect key="frame" x="0.0" y="0.0" width="305" height="258"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poop" translatesAutoresizingMaskIntoConstraints="NO" id="zXh-37-dgC">
+                    <rect key="frame" x="0.0" y="0.0" width="305" height="258"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9s-AK-Ooe">
+                    <rect key="frame" x="0.0" y="0.0" width="305" height="108"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6fI-DJ-Hps">
+                        <rect key="frame" x="0.0" y="0.0" width="305" height="108"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FqX-lk-IMb">
+                                <rect key="frame" x="0.0" y="0.0" width="305" height="108"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="5Oa-dR-5sK">
+                                    <rect key="frame" x="0.0" y="0.0" width="305" height="108"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="4wV-XJ-rpM"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oam-Nn-w1v">
+                    <rect key="frame" x="133.5" y="186" width="38" height="32"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                    <size key="titleShadowOffset" width="1" height="1"/>
+                    <state key="normal" title="Poop">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPb-Ay-xcS">
+                    <rect key="frame" x="0.0" y="108" width="305" height="150"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFO-JM-hOt">
+                            <rect key="frame" x="20" y="69.5" width="265" height="46.5"/>
+                            <string key="text">Pile of Poo emoji, also known just simply as Poo, is an emoji resembling a coiled pile of feces usually adorned with a "friendly smile".</string>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="uFO-JM-hOt" secondAttribute="trailing" constant="20" id="NQV-BV-Jtn"/>
+                        <constraint firstItem="uFO-JM-hOt" firstAttribute="leading" secondItem="VPb-Ay-xcS" secondAttribute="leading" constant="20" id="XSp-rt-Rat"/>
+                        <constraint firstAttribute="bottom" secondItem="uFO-JM-hOt" secondAttribute="bottom" constant="34" id="oA0-IS-k70"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="100" id="sFB-TJ-QpS"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poop" translatesAutoresizingMaskIntoConstraints="NO" id="W9W-lP-lbF">
+                    <rect key="frame" x="92.5" y="46" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="3LJ-ik-F82"/>
+                        <constraint firstAttribute="height" constant="120" id="JZH-3i-V3C"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uFO-JM-hOt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="W9W-lP-lbF" secondAttribute="bottom" constant="10" id="6yO-Th-xnR"/>
+                <constraint firstItem="zXh-37-dgC" firstAttribute="leading" secondItem="uqV-ve-MjE" secondAttribute="leading" id="BqF-Ld-375"/>
+                <constraint firstItem="VPb-Ay-xcS" firstAttribute="top" secondItem="W9W-lP-lbF" secondAttribute="bottom" priority="750" constant="-58" id="Dhy-HU-PNc"/>
+                <constraint firstAttribute="bottom" secondItem="VPb-Ay-xcS" secondAttribute="bottom" id="F2i-sS-6gk"/>
+                <constraint firstItem="W9W-lP-lbF" firstAttribute="centerX" secondItem="VPb-Ay-xcS" secondAttribute="centerX" id="Llw-dI-60L"/>
+                <constraint firstItem="oam-Nn-w1v" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uqV-ve-MjE" secondAttribute="top" constant="20" id="MG5-gu-ePT"/>
+                <constraint firstAttribute="trailing" secondItem="zXh-37-dgC" secondAttribute="trailing" id="QZp-09-J3q"/>
+                <constraint firstItem="VPb-Ay-xcS" firstAttribute="top" secondItem="d9s-AK-Ooe" secondAttribute="bottom" id="S7d-FL-CQy"/>
+                <constraint firstAttribute="bottom" secondItem="zXh-37-dgC" secondAttribute="bottom" id="XQA-1F-3Gk"/>
+                <constraint firstItem="d9s-AK-Ooe" firstAttribute="leading" secondItem="uqV-ve-MjE" secondAttribute="leading" id="gA2-iB-45T"/>
+                <constraint firstItem="zXh-37-dgC" firstAttribute="top" secondItem="uqV-ve-MjE" secondAttribute="top" id="hb5-wm-SFL"/>
+                <constraint firstAttribute="trailing" secondItem="VPb-Ay-xcS" secondAttribute="trailing" id="i82-BT-lFy"/>
+                <constraint firstItem="VPb-Ay-xcS" firstAttribute="leading" secondItem="uqV-ve-MjE" secondAttribute="leading" id="j70-Zi-BY0"/>
+                <constraint firstAttribute="trailing" secondItem="d9s-AK-Ooe" secondAttribute="trailing" id="lA9-5F-JYZ"/>
+                <constraint firstItem="oam-Nn-w1v" firstAttribute="top" secondItem="W9W-lP-lbF" secondAttribute="bottom" priority="250" constant="20" id="n37-QJ-aIn"/>
+                <constraint firstItem="oam-Nn-w1v" firstAttribute="centerX" secondItem="W9W-lP-lbF" secondAttribute="centerX" id="qIQ-tX-pxI"/>
+                <constraint firstItem="d9s-AK-Ooe" firstAttribute="top" secondItem="uqV-ve-MjE" secondAttribute="top" id="vAg-9X-JZM"/>
+                <constraint firstAttribute="bottom" secondItem="W9W-lP-lbF" secondAttribute="bottom" constant="92" id="xKh-WA-p4v"/>
+            </constraints>
+            <point key="canvasLocation" x="43.5" y="69"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="poop" width="1944" height="1859"/>
+    </resources>
+</document>
