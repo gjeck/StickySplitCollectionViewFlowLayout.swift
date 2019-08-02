@@ -3,19 +3,20 @@
 ### What is this?
 `StickySplitCollectionViewFlowLayout` is a layout derived from `UICollectionViewFlowLayout`. It features a split layout for compact sizes as well as a sticky header cell. It supports all the same features of `UICollectionViewFlowLayout`, including `UICollectionElementKindSectionHeader` and `UICollectionElementKindSectionFooter`. The initial implementation was inspired by [CSStickyHeaderFlowLayout](https://github.com/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout).
 
-![media_portrait](StickySplitCollectionViewFlowLayoutIntegration/Assets/media_portrait.gif "Media Portrait Example")
+![media_portrait](StickySplitCollectionViewFlowLayoutIntegration/Assets/media_portrait.gif "Media Portrait Example") ![media_portrait](StickySplitCollectionViewFlowLayoutIntegration/Assets/avatar_portrait.gif "Avatar Portrait Example") ![media_portrait](StickySplitCollectionViewFlowLayoutIntegration/Assets/user_portrait.gif "User Portrait Example")
 
 ![media_landscape](StickySplitCollectionViewFlowLayoutIntegration/Assets/media_landscape.gif "Media Landscape Example")
+![media_landscape](StickySplitCollectionViewFlowLayoutIntegration/Assets/avatar_landscape.gif "Avatar Landscape Example")
 
 ### Installing:
 To install via [CocoaPods](https://cocoapods.org/) add the following to your `Podfile`:
 ```
-pod 'StickySplitCollectionViewFlowLayout', :git => 'https://gjeckell@bitbucket.savagebeast.com/scm/~gjeckell/stickysplitcollectionviewflowlayout.git'
+pod 'StickySplitCollectionViewFlowLayout'
 ```
 
 To install via [Carthage](https://github.com/Carthage/Carthage) add the following to your `Cartfile`:
 ```
-git "https://gjeckell@bitbucket.savagebeast.com/scm/~gjeckell/stickysplitcollectionviewflowlayout.git"
+git "https://github.com/gjeck/StickySplitCollectionViewFlowLayout.swift.git"
 ```
 
 ### Usage:

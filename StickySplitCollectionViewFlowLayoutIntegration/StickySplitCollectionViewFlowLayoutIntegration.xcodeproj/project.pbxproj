@@ -17,6 +17,7 @@
 		0431067D21649CC400C255EF /* MediaPlaylistCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431067C21649CC400C255EF /* MediaPlaylistCollectionViewController.swift */; };
 		043FDE3B1EE724C200C0FDBD /* ParallaxHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043FDE391EE724C200C0FDBD /* ParallaxHeaderCollectionReusableView.xib */; };
 		045F07B21F19F6540064D278 /* SquareImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045F07B01F19F6540064D278 /* SquareImageCollectionViewCell.xib */; };
+		045FFB5622F42C7000900F97 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 045FFB5522F42C6F00900F97 /* README.md */; };
 		0482BE0921E6F6E800C80A18 /* UserProfileStoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0482BE0821E6F6E800C80A18 /* UserProfileStoryCollectionViewCell.xib */; };
 		0482BE0B21E6FA5800C80A18 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482BE0A21E6FA5800C80A18 /* UIView+Extension.swift */; };
 		048BD8AD1EEFAFD900D004E5 /* IntegrationTestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048BD8AC1EEFAFD900D004E5 /* IntegrationTestCollectionViewController.swift */; };
@@ -91,6 +92,7 @@
 		0431067C21649CC400C255EF /* MediaPlaylistCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlaylistCollectionViewController.swift; sourceTree = "<group>"; };
 		043FDE3A1EE724C200C0FDBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ParallaxHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		045F07B11F19F6540064D278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SquareImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		045FFB5522F42C6F00900F97 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		0482BE0821E6F6E800C80A18 /* UserProfileStoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileStoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		0482BE0A21E6FA5800C80A18 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		048BD8AC1EEFAFD900D004E5 /* IntegrationTestCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntegrationTestCollectionViewController.swift; path = "Modules/Integration Test Modules/IntegrationTestCollectionViewController.swift"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		04C3D4BD1EE516490031D1F3 = {
 			isa = PBXGroup;
 			children = (
+				045FFB5522F42C6F00900F97 /* README.md */,
 				04C3D4C81EE516490031D1F3 /* StickySplitCollectionViewFlowLayoutIntegration */,
 				04C3D4DD1EE516490031D1F3 /* StickySplitCollectionViewFlowLayoutIntegrationTests */,
 				04C3D4C71EE516490031D1F3 /* Products */,
@@ -504,6 +507,7 @@
 				04C3D4D41EE516490031D1F3 /* LaunchScreen.storyboard in Resources */,
 				0431067B2164949F00C255EF /* MediaPlaylistCollectionViewController.storyboard in Resources */,
 				04C3D4D11EE516490031D1F3 /* Assets.xcassets in Resources */,
+				045FFB5622F42C7000900F97 /* README.md in Resources */,
 				043FDE3B1EE724C200C0FDBD /* ParallaxHeaderCollectionReusableView.xib in Resources */,
 				04D0B94B21BC2E4000E0864C /* UserProfileHeaderCollectionReusableView.xib in Resources */,
 				04D607461EE71DF4005A1E77 /* ParallaxCollectionViewController.storyboard in Resources */,
