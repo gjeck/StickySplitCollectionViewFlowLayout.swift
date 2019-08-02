@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.license = { :type => "MIT", :file => "LICENSE" }
     s.author = { "Gregory Jeckell" => "gjeck" }
     s.platform = :ios, "9.0"
-    s.swift_version = "4"
+    s.swift_version = "5"
     s.requires_arc = true
     s.frameworks = "UIKit"
     s.source = { :git => "https://gjeckell@bitbucket.savagebeast.com/scm/~gjeckell/stickysplitcollectionviewflowlayout.git", :tag => "#{s.version}" }
