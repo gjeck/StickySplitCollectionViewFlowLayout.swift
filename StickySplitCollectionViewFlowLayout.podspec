@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.swift_version = "5"
     s.requires_arc = true
     s.frameworks = "UIKit"
-    s.source = { :git => "https://gjeckell@bitbucket.savagebeast.com/scm/~gjeckell/stickysplitcollectionviewflowlayout.git", :tag => "#{s.version}" }
+    s.source = { :git => "https://github.com/gjeck/StickySplitCollectionViewFlowLayout.swift.git", :tag => "#{s.version}" }
     s.source_files  = "StickySplitCollectionViewFlowLayout/StickySplitCollectionViewFlowLayout/**/*.{swift,h}"
     s.description  = <<-DESC
         StickySplitCollectionViewFlowLayout is a collection view layout derived from UICollectionViewFlowLayout. It supports the feature set of a flow layout plus some nice additions.
