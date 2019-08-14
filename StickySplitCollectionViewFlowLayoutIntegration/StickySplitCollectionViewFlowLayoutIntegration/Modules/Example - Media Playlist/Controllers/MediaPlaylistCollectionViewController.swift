@@ -26,6 +26,11 @@ class MediaPlaylistCollectionViewController: UIViewController {
         collectionViewLayout.mainHeaderPinsToVisibleBounds = true
         collectionViewLayout.mainHeaderZPosition = .belowAll
         collectionViewLayout.enforcedLayoutMode = .implicit(.right)
+        if #available(iOS 11.0, *) {
+            collectionView.dragInteractionEnabled = true
+            collectionView.dragDelegate = self
+            collectionView.dropDelegate = self
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -77,6 +82,9 @@ class MediaPlaylistCollectionViewController: UIViewController {
         default: return .cellReuseIdentifier
         }
     }
+    
+    // MARK: - Private Properties
+    private var items: [String] = " abcdefghijklmnopqrstuvwxyz".map { String($0) }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -87,7 +95,7 @@ extension MediaPlaylistCollectionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -95,7 +103,7 @@ extension MediaPlaylistCollectionViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier,
                                                       for: indexPath)
         if let standardCell = cell as? StandardCollectionViewCell {
-            standardCell.secondaryLabel?.text = "\(indexPath)"
+            standardCell.secondaryLabel?.text = "Secondary Label: \(items[indexPath.item]) \(indexPath)"
         }
         return cell
     }
@@ -112,6 +120,11 @@ extension MediaPlaylistCollectionViewController: UICollectionViewDataSource {
         case UICollectionView.elementKindSectionHeader:
             let cell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                                                                        withReuseIdentifier: .shuffleHeaderReuseIdentifier,
+                                                                       for: indexPath)
+            return cell
+        case UICollectionView.elementKindSectionFooter:
+            let cell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter,
+                                                                       withReuseIdentifier: .footerReuseIdentifier,
                                                                        for: indexPath)
             return cell
         default:
@@ -147,9 +160,54 @@ extension MediaPlaylistCollectionViewController: UICollectionViewDelegateFlowLay
     }
 }
 
+// MARK: - UICollectionViewDragDelegate
+
+extension MediaPlaylistCollectionViewController: UICollectionViewDragDelegate {
+    @available(iOS 11.0, *)
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let itemProvider = NSItemProvider(object: items[indexPath.item] as NSString)
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        return [dragItem]
+    }
+}
+
+// MARK: - UICollectionViewDropDelegate
+
+extension MediaPlaylistCollectionViewController: UICollectionViewDropDelegate {
+    @available(iOS 11.0, *)
+    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+        guard let destinationIndexPath = coordinator.destinationIndexPath else {
+            return
+        }
+        
+        for dropItem in coordinator.items {
+            guard let sourceIndexPath = dropItem.sourceIndexPath else {
+                continue
+            }
+            let item = items[sourceIndexPath.item]
+            collectionView.performBatchUpdates({
+                items.remove(at: sourceIndexPath.item)
+                items.insert(item, at: destinationIndexPath.item)
+                collectionView.deleteItems(at: [sourceIndexPath])
+                collectionView.insertItems(at: [destinationIndexPath])
+            }, completion: { _ in
+                coordinator.drop(dropItem.dragItem, toItemAt: destinationIndexPath)
+            })
+        }
+    }
+    
+    @available(iOS 11.0, *)
+    func collectionView(_ collectionView: UICollectionView,
+                        dropSessionDidUpdate session: UIDropSession,
+                        withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+        return .init(operation: .move, intent: .insertAtDestinationIndexPath)
+    }
+}
+
 private extension String {
     static let cellReuseIdentifier = "cell"
     static let blankCellReuseIdentifier = "blankCell"
     static let shuffleHeaderReuseIdentifier = "shuffleHeader"
     static let mainHeaderReuseIdentifier = "mainHeader"
+    static let footerReuseIdentifier = "footer"
 }

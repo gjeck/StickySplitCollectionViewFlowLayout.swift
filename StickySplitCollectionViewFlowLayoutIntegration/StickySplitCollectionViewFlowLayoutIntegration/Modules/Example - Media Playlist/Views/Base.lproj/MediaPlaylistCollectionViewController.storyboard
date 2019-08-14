@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OCo-aG-kjl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OCo-aG-kjl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,11 +79,11 @@
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cz9-J5-wDH" customClass="StickySplitCollectionViewFlowLayout" customModule="StickySplitCollectionViewFlowLayout">
                                     <size key="itemSize" width="375" height="70"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="50"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="blankCell" id="Qzb-if-ZJx" userLabel="blankCell" customClass="StandardCollectionViewCell" customModule="StickySplitCollectionViewFlowLayoutIntegration" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="blankCell" id="Qzb-if-ZJx" userLabel="blankCell">
                                         <rect key="frame" x="0.0" y="50" width="375" height="10"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -157,6 +157,10 @@
                                             <constraint firstItem="kVI-ZN-Dhw" firstAttribute="leading" secondItem="RRA-MH-2s0" secondAttribute="leading" constant="20" id="xqw-3x-aAI"/>
                                         </constraints>
                                         <size key="customSize" width="375" height="70"/>
+                                        <connections>
+                                            <outlet property="primaryLabel" destination="kVI-ZN-Dhw" id="GC5-9f-dUY"/>
+                                            <outlet property="secondaryLabel" destination="55N-km-gag" id="hOU-r7-Sp0"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shuffleHeader" id="JHA-oe-csl" userLabel="Shuffle Header">
@@ -181,6 +185,24 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="rwq-mh-ZQn" secondAttribute="bottom" id="8dE-IP-Sya"/>
                                         <constraint firstItem="rwq-mh-ZQn" firstAttribute="centerX" secondItem="JHA-oe-csl" secondAttribute="centerX" id="cBc-sG-L9c"/>
+                                    </constraints>
+                                </collectionReusableView>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="bxm-EC-7Zc">
+                                    <rect key="frame" x="0.0" y="130" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kj-UB-Tvg">
+                                            <rect key="frame" x="20" y="18" width="327" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="1kj-UB-Tvg" firstAttribute="centerY" secondItem="bxm-EC-7Zc" secondAttribute="centerY" id="5Fp-C6-jQL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1kj-UB-Tvg" secondAttribute="trailing" constant="20" id="gtL-TU-IdZ"/>
+                                        <constraint firstItem="1kj-UB-Tvg" firstAttribute="leading" secondItem="bxm-EC-7Zc" secondAttribute="leading" constant="20" id="jjq-EA-kAC"/>
                                     </constraints>
                                 </collectionReusableView>
                                 <connections>
@@ -232,7 +254,6 @@
         <!--Navigation Controller-->
         <scene sceneID="hCC-48-jiB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SLo-k7-O8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OCo-aG-kjl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="2qk-0e-1hr">
@@ -244,6 +265,7 @@
                         <segue destination="A8t-tx-IPZ" kind="relationship" relationship="rootViewController" id="DJj-Qq-lxj"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLo-k7-O8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1340" y="86.806596701649184"/>
         </scene>

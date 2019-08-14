@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name = "StickySplitCollectionViewFlowLayout"
-    s.version = "1.0.0"
+    s.version = "1.0.1"
     s.summary = "StickySplitCollectionViewFlowLayout is a special collection view layout."
     s.homepage = "https://github.com/gjeck/StickySplitCollectionViewFlowLayout.swift"
     s.license = { :type => "MIT", :file => "LICENSE" }

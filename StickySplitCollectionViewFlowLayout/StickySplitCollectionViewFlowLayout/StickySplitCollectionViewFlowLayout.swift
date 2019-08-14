@@ -374,7 +374,7 @@ open class StickySplitCollectionViewFlowLayout: UICollectionViewFlowLayout {
                     attributes.zIndex = StickySplitCollectionViewFlowLayout.mainHeaderBelowAllZIndex
                 }
                 
-                if height > maxHeight {
+                if height > maxHeight && layoutMode == .vertical {
                     y += height - maxHeight
                 }
                 

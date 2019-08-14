@@ -26,7 +26,7 @@ let stickySplitLayout = StickySplitCollectionViewFlowLayout()
 collectionView.collectionViewLayout = stickySplitLayout
 ```
 
-Then register a supplementary view of kind `StickySplitCollectionViewFlowLayout.mainElementKind` to be used as the main header.
+Then register a supplementary view of kind `StickySplitCollectionViewFlowLayout.mainElementKind` to be used as the main-header.
 ```
 let nib = UINib(nibName: "SomeCollectionReusableView", bundle: nil)
 collectionView.register(nib, forSupplementaryViewOfKind: StickySplitCollectionViewFlowLayout.mainElementKind, withReuseIdentifier: "someIdentifier")
@@ -36,6 +36,11 @@ Finally, provide a reference size for the supplementary view
 ```
 stickySplitLayout.mainHeaderReferenceSize = CGSize(kSomeWidth, kSomeHeight)
 ```
+
+#### Configuring the Layout:
+The property `enforcedLayoutMode` controls the layout behavior of the main-header. It defaults to `.implicit(.left)`, meaning the main-header will align to the left when the collectionView bounds has greater width than height. This property can be set to `vertical` to behave like a regular flow layout. 
+
+The property `mainHeaderPinsToVisibleBounds` is similar to `sectionHeadersPinToVisibleBounds`, but specified for the main-header.
 
 Familiarize yourself with the API to see additional features!
 
